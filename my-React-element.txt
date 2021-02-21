@@ -1,0 +1,27 @@
+import React from "react";
+import "./styles.css";
+
+export default function App() {
+  let day = new Date().getDate() 
+// Extracting the day varibale
+  let month = new Date().getMonth()+1;  
+// Extracting the month varibale
+  let year = new Date().getFullYear()  
+// Extracting the year varibale
+  return (
+    <div className="App">
+      <a href = "https://www.hyperiondev.com/">HyperionDev</a> {/*creating the button with a hyperlink*/}
+      <div>
+      <h2> {new Date().toLocaleTimeString()}.</h2> {/*Current time element*/}
+      <h2> {day + " / "+ month + " / "+ year}</h2> {/*Current Date element*/}
+      </div>
+      <ul> {/*Unordered list for the MERN stack*/}
+        <li>MongoDB</li>
+        <li>ExpressJS</li>
+        <li>ReactJS</li>
+        <li>NodeJS</li>
+      </ul>
+      
+    </div>
+  );
+}
